@@ -1,0 +1,49 @@
+#1.1 Write a Python Program(with class concepts) to find the area of the triangle using the below
+#formula.
+#area = (s*(s-a)*(s-b)*(s-c)) ** 0.5
+#Function to take the length of the sides of triangle from user should be defined in the parent class and function to calculate the area sholud be define in subclass.
+
+
+
+
+
+
+class triangle:
+    def __init__(self,a=0,b=0,c=0):
+        self.first_side = a
+        self.second_side = b
+        self.third_side = c
+        
+    def input(self):
+        a = float(input("First Side :"))
+        b = float(input("Second side:"))
+        c = float(input("Third side:"))
+        self.first_side = a
+        self.second_side = b
+        self.third_side = c
+        
+class area(triangle):
+    def __init__(self):
+        super().__init__()
+    
+        
+    def find_area(self):
+        s = (self.first_side + self.second_side + self.third_side) / 2
+    
+        
+        
+        return float((s * (s - self.first_side)*(s-self.second_side)*(s-self.third_side))) **0.5
+        
+        
+    
+    
+Triangle_Area = area()
+Triangle_Area.input()
+print("Area is :", Triangle_Area.find_area())
+        
+        
+##OUTPUT
+#First Side :50
+#Second side :60
+#Third side :70
+#Area is : 1469.6938456699068
