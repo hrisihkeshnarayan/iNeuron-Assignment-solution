@@ -1,0 +1,17 @@
+##2.2 Write a Python function which takes a character (i.e. a string of length 1) and returns True if
+##it is a vowel, False otherwise.
+
+
+def is_vowel(char):
+    if char.upper() == char:
+        return True
+    else:
+        return False
+        
+is_vowel('A')
+is_vowel('a')
+
+##OUTPUT
+
+True
+False
